@@ -32,13 +32,9 @@ dotenv.config();
 const app = express();
 
 // CORE MIDDLEWARE
-const allowedOrigins = (process.env.FRONTEND_ORIGIN || "").split(",");
 app.use(
   cors({
-    origin:
-      allowedOrigins.filter(Boolean).length > 0
-        ? allowedOrigins.map((origin) => origin.trim())
-        : true,
+    origin: true,
     credentials: true,
   })
 );
@@ -66,12 +62,6 @@ app.get("/api/health", (req, res) => {
   res.status(200).json({
     status: "OK",
     message: "Server is healthy",
-  });
-});
-
-app.get("/api", (req, res) => {
-  res.status(200).json({
-    message: "API working",
   });
 });
 

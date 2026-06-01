@@ -38,6 +38,19 @@ body::before {
   margin-top: 75px;
 }
 
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 18px 16px;
+    margin-top: 68px;
+  }
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background: white;
@@ -53,6 +66,16 @@ body::before {
   z-index: 1000;
   height: 68px;
   border-bottom: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
 }
 
 .navbar-brand {
@@ -158,6 +181,16 @@ body::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-group {

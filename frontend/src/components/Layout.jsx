@@ -112,9 +112,17 @@ const Layout = () => {
     location.pathname === '/upload-project';
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#ffffff]">
+    <div className="flex min-h-screen overflow-hidden bg-[#ffffff]">
       {!hideSidebarOnRoute && (
         <>
+          {isMobileMenuOpen && (
+            <button
+              type="button"
+              className="fixed inset-0 z-[60] bg-slate-900/50 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close sidebar"
+            />
+          )}
           {/* Sidebar */}
           <aside
             className={`fixed lg:static inset-y-0 left-0 z-[70] flex flex-col bg-[#0a1e8c] text-white border-r border-[#f37021]/30 transition-all duration-300 ${
@@ -190,7 +198,7 @@ const Layout = () => {
           />
         )}
 
-        <main className="flex-1 overflow-y-auto p-6 lg:p-10 animate-in fade-in slide-in-from-bottom-2 duration-500 bg-[#ffffff] text-[#0a1e8c]">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 animate-in fade-in slide-in-from-bottom-2 duration-500 bg-[#ffffff] text-[#0a1e8c]">
           <Outlet />
         </main>
       </div>

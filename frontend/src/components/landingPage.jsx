@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import campusBackground from "../../images/SLIIT-malabe.jpg";
-import appLogo from "../../images/uniconnect.png";
+import appLogo from "../../images/uniconnect-logo.svg";
 import heroOne from "../../images/hero1.jpg";
 import heroTwo from "../../images/hero3.jpg";
 import {
@@ -354,8 +354,8 @@ const LandingPage = () => {
 
               <div className="absolute inset-0 bg-gradient-to-r from-[#021057]/65 via-[#04218e]/35 to-transparent" />
 
-              <div className="absolute inset-y-0 left-0 flex max-w-[70%] flex-col justify-center px-6 sm:px-10">
-                <h1 className="text-3xl font-black uppercase leading-none text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
+              <div className="absolute inset-y-0 left-0 flex max-w-full sm:max-w-[70%] flex-col justify-center px-6 sm:px-10">
+                <h1 className="text-2xl font-black uppercase leading-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl sm:leading-none">
                   {slide.title}
                 </h1>
                 <div className="mt-4 inline-flex w-fit items-center gap-3 rounded-full bg-[#ff007f]/90 px-4 py-2 text-white sm:px-5">
@@ -386,7 +386,7 @@ const LandingPage = () => {
             </div>
           ))}
 
-          <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+          <div className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 gap-2 sm:flex">
             {heroSlides.map((_, dotIndex) => (
               <button
                 key={`dot-${dotIndex}`}
@@ -583,7 +583,7 @@ const LandingPage = () => {
     {/* CTA */}
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="bg-[#0B1E8A] text-white p-10 rounded-xl flex justify-between items-center">
+        <div className="bg-[#0B1E8A] text-white p-10 rounded-xl flex flex-col gap-6 text-center sm:text-left sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h3 className="text-2xl font-black">Start your journey today</h3>
             <p className="text-sm mt-2 text-gray-200">
